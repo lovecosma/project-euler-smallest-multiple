@@ -5,7 +5,6 @@ end
 
 
 def gcd(a, b)
-    binding.pry
     until b == 0
         temp = b
         b  = a % b
