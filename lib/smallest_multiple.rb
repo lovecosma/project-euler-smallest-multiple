@@ -1,6 +1,14 @@
 # Implement your procedural solution here!
 def smallest_multiple(input)
-   lcmm(1, input)
+    range = (1..input).to_a
+
+    multiple = 1
+    
+    range.each do |num|
+        multiple = lcm(multiple, num)
+    end 
+    
+    multiple
 end 
 
 
@@ -17,14 +25,6 @@ def lcm(a, b)
     return (a * b / gcd(a, b));
 end 
 
-def lcmm(min, max)
-    range = (min..max).to_a
-
-    multiple = min
-    
-    range.each do |num|
-        multiple = lcm(multiple, num)
-    end 
-    
-    multiple
+def lcmm(max)
+   
 end 
