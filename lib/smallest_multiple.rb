@@ -5,16 +5,18 @@ def smallest_multiple input
     range.each do |num|
         multiple = lcm(multiple, num)
     end 
+
+    multiple
 end
 
-def lcm 
+def lcm(a, b)
     a * b / gcd(a, b)
 end 
 
 def gcd(a, b)
     until b == 0
         temp = b
-        b = b % a
+        b = a % b
         a = temp
     end 
     a
